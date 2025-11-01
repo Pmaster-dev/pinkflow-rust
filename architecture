@@ -1,0 +1,106 @@
+### USER INTERFACE
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `ui-web-mobile` | Web & Mobile UI | Your window to opportunity. A clean, beautiful, and accessible space designed for your journey, on any device. | - | - | - |
+
+### AUTH SERVICE
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `svc-deafauth` | DeafAuth Gateway | Your personal key to this world. Acts as the central Identity Provider (IdP), managing user profiles and validating short-lived access tokens for all backend services to enforce zero-trust security. | Identity Platform / IAM | Cognito / IAM | Entra ID (Azure AD B2C) |
+
+### BACKEND API
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `api-creative` | CreativeMagician API | The gateway to your artistry. Manages the journey of your creative spark, from a simple idea to a celebrated masterpiece. | Cloud Run / API Gateway | Lambda / API Gateway | Functions / API Management |
+| `api-business` | BusinessMagician API | The portal for entrepreneurs. Manages the lifecycle of a business idea, from validation and risk assessment to generating a full MVP roadmap. | Cloud Run / API Gateway | Lambda / API Gateway | Functions / API Management |
+| `api-job` | JobMagician API | Your bridge to a new career. Manages job searches, resume parsing, skill matching, and interview scheduling to connect you with inclusive employers. | Cloud Run / API Gateway | Lambda / API Gateway | Functions / API Management |
+| `api-developer` | DeveloperMagician API | The developer's command center. Manages sandbox environments, API key generation, and provides access to system logs for building and testing new integrations. | Cloud Run / API Gateway | Lambda / API Gateway | Functions / API Management |
+
+### ACCESSIBILITY
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `svc-pinksync` | PinkSync | The heart of our communication. Where every voice, sign, and text is understood, ensuring no one is left out of the conversation. | Workflows + Video AI | Step Functions + Rekognition | Logic Apps + Video Analyzer |
+
+### ETHICS
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `svc-fibonrose` | FibonRose | Our promise of fairness. An ethical compass ensuring every AI acts with integrity, so you can trust the guidance you receive. | - | - | - |
+
+### AI CORE
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `ai-core-orchestrator` | MagicianCore | The Grand Conductor of our magical orchestra. MagicianCore is the central intelligence that interprets your goals, then summons and directs the perfect ensemble of specialized AI agents to make your vision a reality. It's the silent, powerful force ensuring every spell is cast flawlessly. | Workflows | Step Functions | Logic Apps |
+
+### AI AGENT
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `agent-idea` | IdeaMagician | Your personal muse for innovation. This creative AI partner helps you conjure, refine, and validate brilliant ideas. It acts as a sounding board, a market analyst, and a co-writer, turning a fleeting spark of inspiration into a solid, actionable concept. | - | - | - |
+| `agent-builder` | BuilderMagician | The master architect for your dreams. This AI agent transforms your validated idea into a tangible blueprint, generating step-by-step roadmaps, technical plans, and resource lists to guide you through the construction of your project or MVP. | - | - | - |
+| `agent-funding` | FundingMagician | Your mystical treasurer, skilled in the art of alchemy. This AI agent scours the financial world to uncover hidden grants, loans, and investors perfectly matched to your project, helping you turn your vision into gold. | - | - | - |
+| `agent-growth` | GrowthMagician | Your enchanted megaphone to the world. This AI strategist crafts compelling marketing spells, identifies your true audience, and reveals secret growth pathways to help your creation flourish and find its community. | - | - | - |
+| `agent-job` | JobMagician | Your career oracle and guide. This AI mentor illuminates your professional path by finding ideal job openings, magically tailoring your resume to each opportunity, and preparing you with the wisdom to ace any interview. | - | - | - |
+| `agent-creative` | CreativeMagician | Your tireless artistic collaborator. This AI familiar assists in the creative process, from conjuring stunning visual concepts and drafting compelling narratives to offering insightful feedback on your masterpieces. | - | - | - |
+| `agent-developer` | DeveloperMagician | The coder's familiar, whispering secrets of the craft. This AI provides powerful assistance by generating elegant code, hunting down elusive bugs, clarifying cryptic APIs, and rapidly scaffolding new services for your projects. | - | - | - |
+
+### AI MODEL
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `ai-local-offline` | LocalMagician | The silent sorcerer in your pocket. This on-device AI provides instant, offline magic for essential tasks like quick translations or UI guidance, ensuring support is always at hand, connected or not. | TensorFlow Lite | SageMaker Edge | Azure Percept |
+| `model-stt` | Speech-to-Text Model | The Scribe of the Air. This foundational spell captures spoken words and instantly transforms them into written text, enabling real-time captioning and understanding voice commands with magical precision. | - | - | - |
+| `model-tts` | Text-to-Speech Model | The Voice of the Page. This enchantment gives written text a clear and natural voice, used for accessibility readouts and creating conversational user interfaces that speak. | - | - | - |
+| `model-ttsign` | Text-to-Sign Model | The Weaver of Signs. This advanced incantation translates written text into fluid, nuanced American Sign Language, bringing communication to life through a digital avatar. | - | - | - |
+
+### MESSAGING
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `bus-events` | Event Bus | The central message bus for the entire system. Enables asynchronous communication between microservices, ensuring loose coupling and scalability. | Pub/Sub | SNS/SQS | Event Grid |
+
+### DATABASE
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `db-operational` | Operational DB | The primary database for storing all application data, including user profiles, projects, and job listings. Provides a reliable and scalable foundation. | Cloud SQL | RDS / Aurora | Azure SQL |
+| `cache-session` | Session Cache | An in-memory data store used for caching frequently accessed data and managing user session information, ensuring high performance and responsiveness. | Memorystore | ElastiCache | Azure Cache for Redis |
+
+### ANALYTICS
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `analytics-warehouse` | Analytics Warehouse | A powerful data warehouse for storing and analyzing large volumes of event data. Powers dashboards, generates business insights, and informs strategic decisions. | BigQuery | Redshift | Synapse Analytics |
+
+### INFRASTRUCTURE
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `infra-hosting` | Container Hosting | The underlying infrastructure for running all containerized applications and services, providing automated deployment, scaling, and management. | GKE | EKS | AKS |
+| `infra-source` | Source Control | The single source of truth for all application code, infrastructure definitions, and CI/CD pipelines. The foundation of our development and deployment process. | - | - | - |
+| `infra-models` | AI Model Hosting | The grand library of enchantments. This managed platform is where our powerful AI models are stored, served, and monitored, ensuring they are always available, fast, and reliable for the Magician agents to call upon. | Vertex AI | SageMaker | Azure Machine Learning |
+
+### MONITORING
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `monitoring-platform` | Monitoring & Alerting | A unified observability platform that collects logs, metrics, and traces from all services. Provides real-time insights into system health and alerts on potential issues. | - | - | - |
+
+### EXTERNAL API
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `api-federal` | Federal & State APIs | Integrations with public APIs from government bodies to access data on business registration, grants, and compliance requirements. | - | - | - |
+| `api-state` | Banking & Financial APIs | Secure integrations with financial service providers to handle payments, connect bank accounts, and verify financial information. | - | - | - |
+
+### GOVERNANCE
+
+| ID | Name | Description | GCP Equivalent | AWS Equivalent | Azure Equivalent |
+|----|------|-------------|----------------|----------------|------------------|
+| `gov-dao` | Community Governance | A decentralized autonomous organization (DAO) that allows community members to vote on proposals, manage treasury funds, and shape the future of the ecosystem. | - | - | - |
+
