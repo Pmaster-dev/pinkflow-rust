@@ -1,6 +1,6 @@
 # 360 Magicians
 
-A comprehensive AI agent platform for idea validation, project building, and community curation with accessibility features.
+A comprehensive distributed agentic system for vision to idea idea to validation, validated to justified, justified report to proposal, approved proposal to dev to preview tohotloades?building, and community curation dao with accessibility features showcase.
 
 ## Overview
 
