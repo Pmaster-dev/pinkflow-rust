@@ -9,10 +9,10 @@
 
 ## Current Repository Scope
 
-- Rust binary crate in `/home/runner/work/pinkflow-rust/pinkflow-rust/src`
-- Versioning files: `/home/runner/work/pinkflow-rust/pinkflow-rust/version.txt`, `/home/runner/work/pinkflow-rust/pinkflow-rust/CHANGELOG.md`, `/home/runner/work/pinkflow-rust/pinkflow-rust/version_manager.py`
+- Rust binary crate in `src/`
+- Versioning files: `version.txt`, `CHANGELOG.md`, `version_manager.py`
 - GitHub Actions workflows for CI, release tagging, and version validation
-- Static design/prototype assets in `/home/runner/work/pinkflow-rust/pinkflow-rust/index.html` and `/home/runner/work/pinkflow-rust/pinkflow-rust/magicians.html`
+- Static design/prototype assets in `index.html` and `magicians.html`
 
 ## Getting Started
 
@@ -44,7 +44,7 @@ cargo run -- help
 
 ## Version Management
 
-The canonical repository version is stored in `/home/runner/work/pinkflow-rust/pinkflow-rust/version.txt`.
+The canonical repository version is stored in `version.txt`.
 
 Use the helper script to bump versions and keep the Rust manifest in sync:
 
@@ -56,13 +56,13 @@ python3 version_manager.py --create-tag --message "Release v0.1.1"
 
 When bumping a version, the script updates:
 
-- `/home/runner/work/pinkflow-rust/pinkflow-rust/version.txt`
-- `/home/runner/work/pinkflow-rust/pinkflow-rust/Cargo.toml`
-- `/home/runner/work/pinkflow-rust/pinkflow-rust/CHANGELOG.md`
+- `version.txt`
+- `Cargo.toml`
+- `CHANGELOG.md`
 
 ## Repository Layout
 
-See `/home/runner/work/pinkflow-rust/pinkflow-rust/filesystem` for the current tracked structure.
+See `filesystem` for the current tracked structure.
 
 ## Contributing
 
