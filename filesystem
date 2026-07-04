@@ -1,71 +1,22 @@
-Organize the files folder for 360 Magicians
-
-360magicians/
-│
-├── core/                           # Core AI agent logic
-│   ├── __init__.py
-│   ├── magician_core.py            # Orchestrates all agents
-│   ├── idea_validator.py           # Validates ideas -> validation.json
-│   └── project_builder.py          # Builds projects -> builder.json + visual pre-templates
-│
-├── services/                       # External service integrations
-│   ├── __init__.py
-│   ├── pinksync_integration.py     # Real-time accessibility & alerts
-│   ├── rag_memory.py               # Interface to RAG AI Studio memory
-│   └── elastic_ingest.py           # Push knowledge to Elasticsearch / Vertex AI
-│
-├── api/                            # FastAPI / Flask endpoints
-│   ├── __init__.py
-│   ├── magician_router.py          # /validate-idea, /build-project
-│   └── auth.py                     # DeafAuth secured endpoints
-│
-├── data/                           # Persistent & temp storage
-│   ├── idea_submissions.json       # Raw user submissions
-│   ├── validation_results.json     # Output from idea_validator
-│   └── builder_outputs.json        # Output from project_builder
-│
-├── utils/                          # Helper functions
-│   ├── __init__.py
-│   ├── logger.py                   # Structured logging
-│   ├── state_manager.py            # Track agent workflow & steps
-│   └── task_queue.py               # Background tasks (Celery/Dramatiq)
-│
-├── pinkflow_cli/                    # CLI automation layer
-│   ├── main.py                      # CLI entry point
-│   ├── commands/
-│   │   ├── __init__.py
-│   │   ├── index.py                 # Dry-run indexing command
-│   │   └── ingest.py                # Ingest to Elasticsearch / Vertex AI
-│   └── utils/                        # CLI helper functions
-│
-├── pinksync/                        # Accessibility & ASL support
-│   ├── mesh.py                      # Real-time alert system
-│   └── glosser.py                   # Human-assisted ASL glossing
-│
-├── community_curation/              # Community validation & moderation
-│   ├── app.py                       # FastAPI/Flask interface
-│   ├── routes/
-│   │   ├── __init__.py
-│   │   └── curation.py              # Endpoint for suggestions/reviews
-│   ├── services/
-│   │   ├── __init__.py
-│   │   └── ai_curator.py            # AI-assisted scoring & ranking
-│   └── data/                         # Decision history & temp DB
-│
-├── config/                          # Global configs & secrets
-│   ├── settings.yaml
-│   └── iam_permissions.json
-│
-├── deployments/                     # Docker / Cloud Run / CI-CD
-│   ├── Dockerfile
-│   ├── docker-compose.yaml
-│   └── cloud_run/
-│
-├── tests/                           # Unit & integration tests
-│   ├── test_idea_validator.py
-│   ├── test_project_builder.py
-│   ├── test_api.py
-│   └── test_pinkflow_cli.py
-│
+pinkflow-rust/
+├── .github/
+│   └── workflows/
+│       ├── ci.yml
+│       ├── release.yml
+│       └── version-check.yml
+├── src/
+│   ├── lib.rs
+│   └── main.rs
+├── tests/
+│   └── test_version_manager.py
+├── CHANGELOG.md
+├── Cargo.lock
+├── Cargo.toml
+├── LICENSE
+├── README.md
+├── filesystem
+├── index.html
+├── magicians.html
 ├── requirements.txt
-└── README.md
+├── version.txt
+└── version_manager.py
