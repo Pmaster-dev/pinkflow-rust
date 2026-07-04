@@ -68,16 +68,24 @@ class VersionManager:
             return
 
         content = self.cargo_file.read_text(encoding="utf-8")
-        updated_content, replacements = re.subn(
-            r'(\[package\][\s\S]*?\nversion\s*=\s*")[^"]+(")',
-            rf'\g<1>{new_version}\2',
-            content,
+        section_match = re.search(r"\[package\](.*?)(?=\n\[|\Z)", content, re.DOTALL)
+        if not section_match:
+            raise ValueError("Could not find [package] section in Cargo.toml")
+
+        package_body = section_match.group(1)
+        updated_body, replacements = re.subn(
+            r'version\s*=\s*"[^"]+"',
+            f'version = "{new_version}"',
+            package_body,
             count=1,
         )
 
         if replacements == 0:
             raise ValueError("Could not find package version entry in Cargo.toml")
 
+        updated_content = (
+            content[: section_match.start(1)] + updated_body + content[section_match.end(1) :]
+        )
         self.cargo_file.write_text(updated_content, encoding="utf-8")
         print(f"Updated Cargo.toml to {new_version}")
 
@@ -104,7 +112,7 @@ class VersionManager:
         )
 
         if replacements == 0:
-            updated_content = content.rstrip() + f"\n{new_entry}"
+            updated_content = content.rstrip() + new_entry
 
         self.changelog_file.write_text(updated_content, encoding="utf-8")
         print(f"Updated CHANGELOG.md with version {version}")

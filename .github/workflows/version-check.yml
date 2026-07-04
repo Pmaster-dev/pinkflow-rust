@@ -40,7 +40,10 @@ jobs:
           from pathlib import Path
           import re
           content = Path('Cargo.toml').read_text(encoding='utf-8')
-          match = re.search(r'^version\s*=\s*"([^"]+)"', content, re.MULTILINE)
+          section = re.search(r'\[package\](.*?)(?=\n\[|\Z)', content, re.DOTALL)
+          if not section:
+              raise SystemExit('Cargo.toml is missing [package] section')
+          match = re.search(r'^version\s*=\s*"([^"]+)"', section.group(1), re.MULTILINE)
           if not match:
               raise SystemExit('Cargo.toml is missing a package version')
           print(match.group(1))
