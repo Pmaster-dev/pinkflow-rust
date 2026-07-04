@@ -1,6 +1,6 @@
-Organize the files folder for 360 Magicians
+Organize the files folder for pinkflow-pipeline
 
-360magicians/
+pinkflow-pipeline/
 │
 ├── core/                           # Core AI agent logic
 │   ├── __init__.py

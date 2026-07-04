@@ -1,12 +1,12 @@
-# 360 Magicians
+# pinkflow-pipeline
 
-[![Release](https://github.com/MBTQ-dev/360magicians/actions/workflows/release.yml/badge.svg)](https://github.com/MBTQ-dev/360magicians/actions/workflows/release.yml)
-[![Version Check](https://github.com/MBTQ-dev/360magicians/actions/workflows/version-check.yml/badge.svg)](https://github.com/MBTQ-dev/360magicians/actions/workflows/version-check.yml)
+[![Release](https://github.com/Pmaster-dev/pinkflow-pipeline/actions/workflows/release.yml/badge.svg)](https://github.com/Pmaster-dev/pinkflow-pipeline/actions/workflows/release.yml)
+[![Version Check](https://github.com/Pmaster-dev/pinkflow-pipeline/actions/workflows/version-check.yml/badge.svg)](https://github.com/Pmaster-dev/pinkflow-pipeline/actions/workflows/version-check.yml)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](./version.txt)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub issues](https://img.shields.io/github/issues/MBTQ-dev/360magicians)](https://github.com/MBTQ-dev/360magicians/issues)
-[![GitHub stars](https://img.shields.io/github/stars/MBTQ-dev/360magicians)](https://github.com/MBTQ-dev/360magicians/stargazers)
-[![GitHub license](https://img.shields.io/github/license/MBTQ-dev/360magicians)](https://github.com/MBTQ-dev/360magicians/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Pmaster-dev/pinkflow-pipeline)](https://github.com/Pmaster-dev/pinkflow-pipeline/issues)
+[![GitHub stars](https://img.shields.io/github/stars/Pmaster-dev/pinkflow-pipeline)](https://github.com/Pmaster-dev/pinkflow-pipeline/stargazers)
+[![GitHub license](https://img.shields.io/github/license/Pmaster-dev/pinkflow-pipeline)](https://github.com/Pmaster-dev/pinkflow-pipeline/blob/main/LICENSE)
 
 A comprehensive distributed agentic system for vision to idea, idea to validation, validated to justified, justified report to proposal, approved proposal to dev to preview to hot-loaded building, and community curation DAO with accessibility features showcase.
 
@@ -28,7 +28,7 @@ A comprehensive distributed agentic system for vision to idea, idea to validatio
 
 ## Overview
 
-360 Magicians is an intelligent system that orchestrates multiple AI agents to help validate ideas, build projects, and manage community curation. The platform emphasizes accessibility, particularly for ASL (American Sign Language) support, and integrates with various services for real-time collaboration and knowledge management.
+pinkflow-pipeline is an intelligent system that orchestrates multiple AI agents to help validate ideas, build projects, and manage community curation. The platform emphasizes accessibility, particularly for ASL (American Sign Language) support, and integrates with various services for real-time collaboration and knowledge management.
 
 ## Features
 
@@ -151,8 +151,8 @@ jobs:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MBTQ-dev/360magicians.git
-   cd 360magicians
+   git clone https://github.com/Pmaster-dev/pinkflow-pipeline.git
+   cd pinkflow-pipeline
    ```
 
 2. Check the current version:
@@ -176,11 +176,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Repository**: [github.com/MBTQ-dev/360magicians](https://github.com/MBTQ-dev/360magicians)
-- **Issues**: [Report a bug or request a feature](https://github.com/MBTQ-dev/360magicians/issues)
+- **Repository**: [github.com/Pmaster-dev/pinkflow-pipeline](https://github.com/Pmaster-dev/pinkflow-pipeline)
+- **Issues**: [Report a bug or request a feature](https://github.com/Pmaster-dev/pinkflow-pipeline/issues)
 
 ---
 
 <p align="center">
-  Made with ❤️ by the 360 Magicians Team
+  Made with ❤️ by the pinkflow-pipeline Team
 </p>
