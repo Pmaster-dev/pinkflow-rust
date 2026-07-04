@@ -3,7 +3,7 @@
 [![Rust CI](https://github.com/Pmaster-dev/pinkflow-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/Pmaster-dev/pinkflow-rust/actions/workflows/ci.yml)
 [![Release](https://github.com/Pmaster-dev/pinkflow-rust/actions/workflows/release.yml/badge.svg)](https://github.com/Pmaster-dev/pinkflow-rust/actions/workflows/release.yml)
 [![Version Check](https://github.com/Pmaster-dev/pinkflow-rust/actions/workflows/version-check.yml/badge.svg)](https://github.com/Pmaster-dev/pinkflow-rust/actions/workflows/version-check.yml)
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](./version.txt)
+[![Version](https://img.shields.io/github/v/release/Pmaster-dev/pinkflow-rust?display_name=tag&sort=semver)](https://github.com/Pmaster-dev/pinkflow-rust/releases)
 
 `pinkflow-rust` is now a minimal Rust project scaffold for the Pinkflow runtime. This repository keeps a small Python helper for release/version management and preserves the existing static design artifacts while establishing a real Rust codebase.
 
