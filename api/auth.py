@@ -1,8 +1,9 @@
 """FastAPI router exposing the /a2a/auth endpoint.
 
-The endpoint accepts a ****** via the Authorization header, runs the
-full A2A chain (Copilot OIDC primary → MAGI fallback), and returns the
-normalized identity on success.
+The endpoint reads an OIDC id-token from the Authorization header
+(``Authorization: ****** runs the full A2A chain
+(Copilot OIDC primary → MAGI fallback), and returns the normalized
+identity on success.
 
 FastAPI is optional: if it is not installed the module imports without error
 but ``router`` is not defined, and the endpoint cannot be registered.
@@ -39,8 +40,9 @@ if _HAS_FASTAPI:
         """
         Authenticate an A2A request.
 
-        Reads a ****** from the ``Authorization`` header, runs the
-        A2A chain (Copilot OIDC → MAGI fallback) and returns the caller's
+        Reads an OIDC id-token from the ``Authorization`` header
+        (``Authorization: <scheme> <token>``), runs the A2A chain
+        (Copilot OIDC → MAGI fallback) and returns the caller's
         normalized identity on success.
 
         Returns HTTP 401 if every provider in the chain denies the request.
