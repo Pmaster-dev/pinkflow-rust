@@ -17,13 +17,15 @@ pub fn command_output(command: Option<&str>) -> String {
         Some("help") | Some("--help") | Some("-h") => {
             format!("Usage: {APP_NAME} [summary|version|help]")
         }
-        Some(other) => format!("Unknown command: {other}\nUsage: {APP_NAME} [summary|version|help]"),
+        Some(other) => {
+            format!("Unknown command: {other}\nUsage: {APP_NAME} [summary|version|help]")
+        }
     }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{command_output, summary, version, APP_NAME};
+    use super::{APP_NAME, command_output, summary, version};
 
     #[test]
     fn version_matches_cargo_package_version() {
