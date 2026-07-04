@@ -1,5 +1,2 @@
-# 360 Magicians - Python Dependencies
-# See filesystem for project structure
-
-# File type identification library
-pylibmagic>=0.5.0
+# No external Python dependencies are required for the repository tooling.
+# version_manager.py and its tests use the Python standard library.

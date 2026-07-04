@@ -1,3 +1,6 @@
+use pinkflow_rust::command_output;
+
 fn main() {
-    println!("Hello, world!");
+    let command = std::env::args().nth(1);
+    println!("{}", command_output(command.as_deref()));
 }

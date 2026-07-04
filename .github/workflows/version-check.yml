@@ -5,30 +5,25 @@ on:
     paths:
       - 'version.txt'
       - 'CHANGELOG.md'
+      - 'Cargo.toml'
+      - 'version_manager.py'
 
 jobs:
   validate-version:
     name: Validate Version Update
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      
-      - name: Get current version
-        id: current
-        run: |
-          VERSION=$(cat version.txt)
-          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
-          echo "Current version: $VERSION"
-      
+
       - name: Validate version format
         run: |
           VERSION=$(cat version.txt)
@@ -37,7 +32,26 @@ jobs:
             exit 1
           fi
           echo "Version format is valid: $VERSION"
-      
+
+      - name: Validate Cargo version sync
+        run: |
+          VERSION=$(cat version.txt)
+          CARGO_VERSION=$(python3 - <<'PY'
+          from pathlib import Path
+          import re
+          content = Path('Cargo.toml').read_text(encoding='utf-8')
+          match = re.search(r'^version\s*=\s*"([^"]+)"', content, re.MULTILINE)
+          if not match:
+              raise SystemExit('Cargo.toml is missing a package version')
+          print(match.group(1))
+          PY
+          )
+          if [ "$VERSION" != "$CARGO_VERSION" ]; then
+            echo "Error: version.txt ($VERSION) does not match Cargo.toml ($CARGO_VERSION)"
+            exit 1
+          fi
+          echo "Cargo.toml version matches version.txt"
+
       - name: Check if version exists in CHANGELOG
         run: |
           VERSION=$(cat version.txt)
@@ -47,6 +61,6 @@ jobs:
             exit 1
           fi
           echo "Version $VERSION found in CHANGELOG.md"
-      
+
       - name: Version validation passed
         run: echo "All version checks passed successfully!"

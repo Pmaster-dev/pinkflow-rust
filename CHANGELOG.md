@@ -8,13 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Version tracking with version.txt
-- CHANGELOG.md for documenting updates
-- Automated version management system
+- Initialized a working Rust crate for `pinkflow-rust`
+- Added Rust and Python validation coverage for runtime and version tooling
+- Added repository-native CI for formatting, linting, build, and tests
+
+### Changed
+- Updated repository documentation and links to match `Pmaster-dev/pinkflow-rust`
+- Synchronized release tooling to keep `Cargo.toml` aligned with `version.txt`
+- Replaced speculative filesystem notes with the current repository structure
 
 ## [0.1.0] - 2025-10-17
 
 ### Added
-- Initial filesystem structure documentation
-- Core architecture for 360 Magicians project
-- Directory layout for AI agent logic, services, API, and utilities
+- Initial repository contents
+- Version tracking with `version.txt`
+- `CHANGELOG.md` for documenting updates
+- Automated version management system
