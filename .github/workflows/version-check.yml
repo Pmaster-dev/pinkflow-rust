@@ -6,6 +6,10 @@ on:
       - 'version.txt'
       - 'CHANGELOG.md'
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   validate-version:
     name: Validate Version Update
