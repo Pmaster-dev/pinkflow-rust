@@ -10,6 +10,7 @@ pinkflow-rust/
 ├── tests/
 │   └── test_version_manager.py
 ├── CHANGELOG.md
+├── Cargo.lock
 ├── Cargo.toml
 ├── LICENSE
 ├── README.md
