@@ -55,7 +55,7 @@ jobs:
       - name: Check if version exists in CHANGELOG
         run: |
           VERSION=$(cat version.txt)
-          if ! grep -q "\[$VERSION\]" CHANGELOG.md; then
+          if ! grep -qF "[$VERSION]" CHANGELOG.md; then
             echo "Warning: Version $VERSION not found in CHANGELOG.md"
             echo "Please update CHANGELOG.md with the new version entry"
             exit 1
