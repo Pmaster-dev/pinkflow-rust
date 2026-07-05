@@ -8,6 +8,10 @@ on:
       - 'Cargo.toml'
       - 'version_manager.py'
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   validate-version:
     name: Validate Version Update
