@@ -851,7 +851,7 @@ color: var(–sub);
       <span class="panel-badge" id="lc-detail-badge">select a stage</span>
     </div>
     <div class="panel-body" id="lc-detail-body" style="font-size:0.8rem;color:var(--sub);line-height:1.7">
-      Click any lifecycle stage above to see details, vr4deaf integration points, and pathway triggers.
+      Click any lifecycle stage above to see details, MBTQ integration points, and pathway triggers.
     </div>
   </div>
 
@@ -1061,7 +1061,7 @@ function submitTask() {
 // ============================================================
 const archLayers = [
   { color:'#6eb5ff', title:'User Interaction Layer',        desc:'Web & mobile frontends · ASL-native interfaces',      nodes:['ui-web-mobile','asl-overlay','visual-alerts','caption-engine'] },
-  { color:'#f5c842', title:'Core Services & Gateways',      desc:'DeafAuth · PinkSync · FibronRose · @vr4deaf/gateway',    nodes:['DeafAuth (PASETO v4)','PinkSync :3003','FibronRose :3004','@vr4deaf/gateway','a11y :3005'] },
+  { color:'#f5c842', title:'Core Services & Gateways',      desc:'DeafAuth · PinkSync · FibronRose · @mbtq/gateway',    nodes:['DeafAuth (PASETO v4)','PinkSync :3003','FibronRose :3004','@mbtq/gateway','a11y :3005'] },
   { color:'#a78bfa', title:'Microservice APIs',             desc:'Domain gateways for each Magician persona',           nodes:['Business API :8001','Developer API :8002','Creative API :8003','Job API :8004','DocuHand API :8005'] },
   { color:'#2cd9c5', title:'AI Magician Agents',            desc:'Specialized goal-oriented AI agents',                 nodes:['IdeaMagician','BuilderMagician','FundingMagician','CreativeMagician','PathwayEngine','Orchestrator'] },
   { color:'#ff8fab', title:'Data & Intelligence Layer',     desc:'Persistence, messaging, analytics',                   nodes:['Supabase (auth/RLS)','Neon.tech (Fibronrose)','Deno KV','Redis Streams','Upstash cache','BigQuery'] },

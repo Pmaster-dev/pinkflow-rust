@@ -606,7 +606,7 @@ color: var(–muted);
     <div>
       <div class="ph-eyebrow"><span></span>Accessible Build Pipeline</div>
       <h1 class="ph-title">RUST<br><em>CARGO</em><br>BUILDPACK</h1>
-      <p class="ph-sub">Bilateral lifecycle integration — PinkFlow as both a CNB consumer and a buildpack provider. Detection, build, and export flow through the vr4deaf gateway. Your pipeline, your layers.</p>
+      <p class="ph-sub">Bilateral lifecycle integration — PinkFlow as both a CNB consumer and a buildpack provider. Detection, build, and export flow through the MBTQ gateway. Your pipeline, your layers.</p>
     </div>
     <div class="ph-meta" role="contentinfo">
       <div>API <strong>0.12</strong></div>
@@ -733,7 +733,7 @@ color: var(–muted);
 <div class="block">
   <div class="block-header">
     <span class="block-title">buildpack.toml</span>
-    <span class="block-badge">vr4deaf.pinkflow.rust</span>
+    <span class="block-badge">mbtq.pinkflow.rust</span>
   </div>
   <div class="block-body">
     <div class="code-scroll" role="region" aria-label="buildpack.toml configuration" tabindex="0">
@@ -745,13 +745,13 @@ color: var(–muted);
 <span class="tok-key">api</span> = <span class="tok-str">“0.12”</span>
 
 <span class="tok-section">[buildpack]</span>
-<span class="tok-key">id</span>          = <span class="tok-str">“vr4deaf.pinkflow.rust”</span>
+<span class="tok-key">id</span>          = <span class="tok-str">“mbtq.pinkflow.rust”</span>
 <span class="tok-key">name</span>        = <span class="tok-str">“PinkFlow Rust/Cargo Buildpack”</span>
 <span class="tok-key">version</span>     = <span class="tok-str">“1.0.0”</span>
 <span class="tok-key">homepage</span>    = <span class="tok-str">“https://ghcr.io/pmaster-dev/pinkflow-rust”</span>
 <span class="tok-key">clear-env</span>   = <span class="tok-kw">false</span>
-<span class="tok-key">description</span> = <span class="tok-str">“Bilateral Rust/Cargo build pipeline for vr4deaf”</span>
-<span class="tok-key">keywords</span>    = [<span class="tok-str">"rust"</span>, <span class="tok-str">"cargo"</span>, <span class="tok-str">"vr4deaf"</span>, <span class="tok-str">"deaf-first"</span>]
+<span class="tok-key">description</span> = <span class="tok-str">"Bilateral Rust/Cargo build pipeline for MBTQ"</span>
+<span class="tok-key">keywords</span>    = [<span class="tok-str">"rust"</span>, <span class="tok-str">"cargo"</span>, <span class="tok-str">"mbtq"</span>, <span class="tok-str">"deaf-first"</span>]
 <span class="tok-key">sbom-formats</span> = [
 <span class="tok-str">“application/vnd.cyclonedx+json”</span>,
 <span class="tok-str">“application/spdx+json”</span>,
@@ -784,11 +784,11 @@ color: var(–muted);
 <span class="tok-key">os</span>   = <span class="tok-str">“linux”</span>
 <span class="tok-key">arch</span> = <span class="tok-str">“arm64”</span>
 
-<span class="tok-comment"># vr4deaf metadata — Fibronrose trust anchor</span>
+<span class="tok-comment"># MBTQ metadata — Fibronrose trust anchor</span>
 <span class="tok-section">[metadata]</span>
 <span class="tok-key">fibronrose-threshold</span> = <span class="tok-num">0.382</span>
 <span class="tok-key">deafauth-tier</span>        = <span class="tok-num">1</span>
-<span class="tok-key">gateway</span>              = <span class="tok-str">”@vr4deaf/gateway”</span>
+<span class="tok-key">gateway</span>              = <span class="tok-str">”@mbtq/gateway”</span>
 <span class="tok-key">paseto-version</span>       = <span class="tok-str">“v4”</span>
 </div>
 </div>
@@ -829,8 +829,8 @@ color: var(–muted);
 <span class="tok-key">rustc-version</span>   = <span class="tok-str">“1.78.0”</span>
 <span class="tok-key">profile</span>         = <span class="tok-str">“release”</span>
 <span class="tok-key">exec-env</span>        = [<span class="tok-str">“production”</span>]
-<span class="tok-key">vr4deaf-service</span>    = <span class="tok-str">“pinkflow”</span>
-<span class="tok-key">vr4deaf-port</span>       = <span class="tok-num">3008</span>
+<span class="tok-key">mbtq-service</span>    = <span class="tok-str">“pinkflow”</span>
+<span class="tok-key">mbtq-port</span>       = <span class="tok-num">3008</span>
 
 <span class="tok-comment"># binary layer — launch only</span>
 <span class="tok-section">[types]</span>
@@ -901,7 +901,7 @@ color: var(–muted);
             <td style="color:var(--muted);font-size:0.62rem">cargo-audit, clippy — build-only, no cache</td>
           </tr>
           <tr>
-            <td><code style="color:var(--amber)">vr4deaf-exec.d</code></td>
+            <td><code style="color:var(--amber)">mbtq-exec.d</code></td>
             <td class="bool-f">–</td><td class="bool-f">–</td><td class="bool-t">✓</td>
             <td class="restored-y">Yes</td><td class="restored-n">No</td>
             <td style="color:var(--muted);font-size:0.62rem">exec.d scripts inject PASETO + Fibronrose env at launch</td>
@@ -953,7 +953,7 @@ color: var(–muted);
 <span class="tok-key">exec-env</span>    = [<span class="tok-str">“test”</span>]
 
 <span class="tok-comment"># exec.d — injected before launch</span>
-<span class="tok-comment"># injects VR4DEAF_PASETO, FIBRONROSE_SCORE</span>
+<span class="tok-comment"># injects MBTQ_PASETO, FIBRONROSE_SCORE</span>
 <span class="tok-comment"># into the process environment</span>
 
 <span class="tok-comment"># Slice: ship only the binary</span>
@@ -1006,7 +1006,7 @@ color: var(–muted);
 <span class="tok-section">[requires.metadata]</span>
 <span class="tok-key">version</span>    = <span class="tok-str">“~1.78”</span>
 <span class="tok-key">edition</span>    = <span class="tok-str">“2021”</span>
-<span class="tok-key">vr4deaf-tier</span>  = <span class="tok-num">1</span>
+<span class="tok-key">mbtq-tier</span>  = <span class="tok-num">1</span>
 </div>
 </div>
 </div>
@@ -1040,7 +1040,7 @@ const phases = {
     icon: '🔍', title: 'Detection', spec: 'Phase #1 · /bin/detect · CNB API 0.12',
     inputs: [
       { key: '$CNB_BUILD_PLAN_PATH', val: '/tmp/plan.toml',                    attr: 'E' },
-      { key: '$CNB_BUILDPACK_DIR',   val: '/cnb/buildpacks/vr4deaf.pinkflow.rust', attr: 'ER' },
+      { key: '$CNB_BUILDPACK_DIR',   val: '/cnb/buildpacks/mbtq.pinkflow.rust', attr: 'ER' },
       { key: '$CNB_EXEC_ENV',        val: 'production',                         attr: 'AR' },
       { key: '$CNB_PLATFORM_DIR',    val: '/platform',                           attr: 'AR' },
     ],
@@ -1055,7 +1055,7 @@ const phases = {
     icon: '📂', title: 'Analysis', spec: 'Phase #2 · layer restore · CNB API 0.12',
     inputs: [
       { key: 'prev OCI image',       val: 'ghcr.io/pmaster-dev/pinkflow-rust/latest', attr: '' },
-      { key: 'buildpack group',      val: 'vr4deaf.pinkflow.rust',       attr: '' },
+      { key: 'buildpack group',      val: 'mbtq.pinkflow.rust',       attr: '' },
     ],
     outputs: [
       { key: 'cargo-registry.toml', val: 'restored (cache=true)',     attr: '' },
@@ -1067,7 +1067,7 @@ const phases = {
   build: {
     icon: '⚙️', title: 'Build', spec: 'Phase #5 · /bin/build · cargo build --release',
     inputs: [
-      { key: '$CNB_LAYERS_DIR',   val: '/layers/vr4deaf.pinkflow.rust', attr: 'EIC' },
+      { key: '$CNB_LAYERS_DIR',   val: '/layers/mbtq.pinkflow.rust', attr: 'EIC' },
       { key: '$CNB_BP_PLAN_PATH', val: '/tmp/buildpack-plan.toml',   attr: 'ER' },
       { key: '$CNB_EXEC_ENV',     val: 'production',                  attr: 'AR' },
       { key: 'CARGO_HOME',        val: '/layers/.../cargo-registry', attr: 'PATH' },
@@ -1079,13 +1079,13 @@ const phases = {
       { key: 'launch.sbom.cdx.json', val: 'SBOM generated',    attr: '' },
       { key: 'launch.toml',     val: 'web process defined',     attr: '' },
     ],
-    note: 'cargo build --release runs inside /bin/build. CARGO_HOME and CARGO_TARGET_DIR point to layer directories — incremental compilation fully cached. SBOM written for all crates. exec.d scripts placed in vr4deaf-exec.d layer for PASETO injection at launch.'
+    note: 'cargo build --release runs inside /bin/build. CARGO_HOME and CARGO_TARGET_DIR point to layer directories — incremental compilation fully cached. SBOM written for all crates. exec.d scripts placed in mbtq-exec.d layer for PASETO injection at launch.'
   },
   export: {
     icon: '📦', title: 'Export', spec: 'Phase #6 · OCI image assembly',
     inputs: [
       { key: 'pinkflow-bin layer', val: 'launch=true, local dir', attr: '' },
-      { key: 'vr4deaf-exec.d layer', val: 'launch=true, local dir', attr: '' },
+      { key: 'mbtq-exec.d layer', val: 'launch=true, local dir', attr: '' },
       { key: 'run image',         val: 'ubuntu:22.04-slim',       attr: '' },
     ],
     outputs: [
@@ -1103,12 +1103,12 @@ const phases = {
       { key: 'CNB_PROCESS_TYPE', val: 'web (or dev / test)',     attr: '' },
     ],
     outputs: [
-      { key: 'VR4DEAF_PASETO',        val: 'injected by exec.d',   attr: 'env' },
+      { key: 'MBTQ_PASETO',        val: 'injected by exec.d',   attr: 'env' },
       { key: 'FIBRONROSE_SCORE',   val: '0.91 (injected)',       attr: 'env' },
       { key: 'DEAFAUTH_TIER',      val: '1 (injected)',          attr: 'env' },
       { key: '/workspace/pinkflow', val: '--port 3008',          attr: 'proc' },
     ],
-    note: 'exec.d scripts run before the process starts. vr4deaf-exec.d/web/ injects PASETO token, Fibronrose trust score, and DeafAUTH tier into the environment. No audio dependency anywhere in the chain — fully visual-first.'
+    note: 'exec.d scripts run before the process starts. mbtq-exec.d/web/ injects PASETO token, Fibronrose trust score, and DeafAUTH tier into the environment. No audio dependency anywhere in the chain — fully visual-first.'
   }
 };
 
@@ -1235,28 +1235,28 @@ function setEnv(btn, env) {
 // LIVE CARGO LOG
 // ============================================================
 const logLines = [
-  { cls: 'log-info', msg: 'lifecycle: executing /bin/detect (vr4deaf.pinkflow.rust)' },
+  { cls: 'log-info', msg: 'lifecycle: executing /bin/detect (mbtq.pinkflow.rust)' },
   { cls: 'log-ok',   msg: '  detect: Found Cargo.toml — detection passed (exit 0)' },
   { cls: 'log-info', msg: 'lifecycle: phase #2 analysis — restoring layer metadata' },
   { cls: 'log-ok',   msg: '  analysis: cargo-registry layer restored from cache (3.1 GB)' },
   { cls: 'log-ok',   msg: '  analysis: cargo-target layer restored from cache (0.8 GB)' },
-  { cls: 'log-info', msg: 'lifecycle: executing /bin/build (vr4deaf.pinkflow.rust)' },
-  { cls: 'log-dim',  msg: '  build: CARGO_HOME=/layers/vr4deaf.pinkflow.rust/cargo-registry' },
-  { cls: 'log-dim',  msg: '  build: CARGO_TARGET_DIR=/layers/vr4deaf.pinkflow.rust/cargo-target' },
+  { cls: 'log-info', msg: 'lifecycle: executing /bin/build (mbtq.pinkflow.rust)' },
+  { cls: 'log-dim',  msg: '  build: CARGO_HOME=/layers/mbtq.pinkflow.rust/cargo-registry' },
+  { cls: 'log-dim',  msg: '  build: CARGO_TARGET_DIR=/layers/mbtq.pinkflow.rust/cargo-target' },
   { cls: 'log-info', msg: '  Compiling pinkflow v1.0.0 (/workspace)' },
   { cls: 'log-ok',   msg: '  Finished release [optimized] target(s) in 4.32s' },
   { cls: 'log-info', msg: '  build: writing launch.toml — process type "web" (exec-env: production)' },
   { cls: 'log-info', msg: '  build: generating SBOM → launch.sbom.cdx.json' },
   { cls: 'log-ok',   msg: '  build: SBOM complete — 142 crates catalogued' },
-  { cls: 'log-info', msg: '  build: placing exec.d/web/vr4deaf-inject' },
+  { cls: 'log-info', msg: '  build: placing exec.d/web/mbtq-inject' },
   { cls: 'log-ok',   msg: 'lifecycle: /bin/build exited 0' },
   { cls: 'log-info', msg: 'lifecycle: phase #6 export — assembling OCI image' },
   { cls: 'log-ok',   msg: '  export: pinkflow-bin layer → transferred (1 layer)' },
-  { cls: 'log-ok',   msg: '  export: vr4deaf-exec.d layer → transferred' },
+  { cls: 'log-ok',   msg: '  export: mbtq-exec.d layer → transferred' },
   { cls: 'log-dim',  msg: '  export: cargo-registry saved to cache (launch=false)' },
   { cls: 'log-ok',   msg: '  export: image pushed → ghcr.io/pmaster-dev/pinkflow-rust@sha256:a4f9c3' },
   { cls: 'log-ok',   msg: 'lifecycle: build complete ✓ — bilateral flow nominal' },
-  { cls: 'log-warn', msg: '  runtime: exec.d/web/vr4deaf-inject — injecting PASETO v4 token' },
+  { cls: 'log-warn', msg: '  runtime: exec.d/web/mbtq-inject — injecting PASETO v4 token' },
   { cls: 'log-ok',   msg: '  runtime: FIBRONROSE_SCORE=0.91 DEAFAUTH_TIER=1 — env set' },
   { cls: 'log-ok',   msg: '  runtime: launching /workspace/pinkflow --port 3008' },
 ];
