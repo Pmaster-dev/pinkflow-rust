@@ -575,6 +575,8 @@ font-size: 0.6rem;
 color: var(–muted);
 }
 .footer strong { color: var(–rust); }
+.footer-clock { display: flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+.footer-clock::before { content: '⏱'; font-size: 0.65rem; }
 
 :focus-visible { outline: 2px solid var(–rust); outline-offset: 3px; }
 </style>
@@ -1028,6 +1030,7 @@ color: var(–muted);
 
 <footer class="footer" role="contentinfo">
   <span><strong>PinkFlow</strong> · github.com/Pmaster-dev · port 3008 · Deaf-first · CNB API 0.12</span>
+  <time class="footer-clock" id="footer-clock" aria-label="Current time" aria-live="off"></time>
   <span>bilateral lifecycle · PASETO v4 · Fibronrose anchored</span>
 </footer>
 
@@ -1280,6 +1283,21 @@ function appendLog() {
 // Seed initial logs
 for (let i = 0; i < 12; i++) appendLog();
 setInterval(appendLog, 2600);
+
+// ============================================================
+// LIVE CLOCK
+// ============================================================
+(function tickClock() {
+  const el = document.getElementById('footer-clock');
+  if (el) {
+    const now = new Date();
+    const date = now.toLocaleDateString(undefined, { weekday:'short', year:'numeric', month:'short', day:'numeric' });
+    const time = now.toLocaleTimeString(undefined, { hour:'2-digit', minute:'2-digit', second:'2-digit', hour12: false });
+    el.textContent = `${date} · ${time}`;
+    el.setAttribute('datetime', now.toISOString());
+  }
+  setTimeout(tickClock, 1000);
+})();
 </script>
 
 </body>

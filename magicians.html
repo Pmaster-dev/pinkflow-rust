@@ -627,6 +627,8 @@ font-size: 0.6rem;
 color: var(–sub);
 }
 .footer strong { color: var(–gold); }
+.footer-clock { display: flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+.footer-clock::before { content: '⏱'; font-size: 0.65rem; }
 
 :focus-visible { outline: 2px solid var(–gold); outline-offset: 3px; }
 </style>
@@ -876,6 +878,7 @@ color: var(–sub);
 
 <footer class="footer" role="contentinfo">
   <span><strong>360 Magicians System</strong> · github.com/360-Magicians/System · Deaf-First · MIT</span>
+  <time class="footer-clock" id="footer-clock" aria-label="Current time" aria-live="off"></time>
   <span>GitHub Integration · FastAPI · Docker · K8s · PinkFlow CLI</span>
 </footer>
 
@@ -1160,6 +1163,21 @@ document.querySelectorAll('.lc-stage').forEach((s, i, arr) => {
     if (e.key === 'ArrowLeft')  arr[Math.max(i-1,0)].focus();
   });
 });
+
+// ============================================================
+// LIVE CLOCK
+// ============================================================
+(function tickClock() {
+  const el = document.getElementById('footer-clock');
+  if (el) {
+    const now = new Date();
+    const date = now.toLocaleDateString(undefined, { weekday:'short', year:'numeric', month:'short', day:'numeric' });
+    const time = now.toLocaleTimeString(undefined, { hour:'2-digit', minute:'2-digit', second:'2-digit', hour12: false });
+    el.textContent = `${date} · ${time}`;
+    el.setAttribute('datetime', now.toISOString());
+  }
+  setTimeout(tickClock, 1000);
+})();
 </script>
 
 </body>
